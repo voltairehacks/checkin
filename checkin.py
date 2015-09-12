@@ -25,8 +25,8 @@ END_NMAP     = 'Nmap done'
 # to detect newly connected devices as fast as possible, but we also want to
 # detect all devices eventually. Thus, we need to take different approaches
 # simultaneously. This needs to be adjusted based on tests in a real set-up.
-COMMON_IPS = '192.168.1.2-15 192.168.1.50-60'
-OTHER_IPS  = '192.168.1.16-49 192.168.1.61-150' # NOTE! 151+ left out
+COMMON_IPS = '192.168.0.2-15 192.168.0.50-60'
+OTHER_IPS  = '192.168.0.16-49 192.168.0.61-150' # NOTE! 151+ left out
 
 NMAP_FLAG_SETS = [
     '-sn %s' % COMMON_IPS,                    # Fastest (ARP scan common ips)
