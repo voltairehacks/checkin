@@ -4,11 +4,11 @@ The `checkin.py` script runs a continuous `nmap` scan, combining different
 scan techniques, to keep an updated table of MAC-to-IP mappings in a JSON file
 located at `netmap.json`.
 
-# Installing
+## Installing
 
 There are no dependencies, besides `nmap` itself. Just copy the script.
 
-# Running
+## Running
 
 The script needs root privileges to be able to pick up MAC addresses. Run:
 
@@ -16,7 +16,7 @@ The script needs root privileges to be able to pick up MAC addresses. Run:
 
 You may want to daemonize the process.
 
-# Troubleshooting
+## Troubleshooting
 
 If you see too much of this message:
 
