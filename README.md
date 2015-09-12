@@ -24,9 +24,9 @@ If you see too much of this message:
 
 You may want to allocate some extra memory to the ARP table. Try running:
 
-  sudo /sbin/sysctl -w net.ipv4.neigh.default.gc_thresh3=4096
-  sudo /sbin/sysctl -w net.ipv4.neigh.default.gc_thresh2=2048
-  sudo /sbin/sysctl -w net.ipv4.neigh.default.gc_thresh1=1024
+    sudo /sbin/sysctl -w net.ipv4.neigh.default.gc_thresh3=4096
+    sudo /sbin/sysctl -w net.ipv4.neigh.default.gc_thresh2=2048
+    sudo /sbin/sysctl -w net.ipv4.neigh.default.gc_thresh1=1024
 
 Double those numbers, if necessary. Any more than that stops making sense, and
 the script should be adjusted to run `nmap` more conservatively.
