@@ -144,5 +144,6 @@ def main():
         netmap.expire()
         print('---')
         netmap.print()
+        netmap.save(OUTPUT_FILE)
 
 main()

@@ -2,7 +2,7 @@
 
 The `checkin.py` script runs a continuous `nmap` scan, combining different
 scan techniques, to keep an updated table of MAC-to-IP mappings in a JSON file
-located at `/netmap.json`.
+located at `netmap.json`.
 
 # Installing
 
