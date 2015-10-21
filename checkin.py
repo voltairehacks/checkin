@@ -77,7 +77,7 @@ class Netmap:
             entry = device.to_entry()
             print("* {ip: <20} {mac: <20} {last_seen}".format(**entry))
 
-    def save(self, path):
+    def save(self):
         entries = [ device.to_entry() for device in self.devices_by_mac.values() ]
         firebase.put('/', 'status', entries)
 
