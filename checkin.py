@@ -4,12 +4,10 @@ from pprint import pprint
 from datetime import datetime
 from threading import Thread
 from queue import Queue
-from firebase import firebase
-
 
 # This script runs `nmap` repeatedly, with different arguments, and keeps an
-# updated table of ip/mac entries in firebase:
-firebase = firebase.FirebaseApplication('https://voltaire-doorman.firebaseio.com', None)
+# updated table of ip/mac entries in `OUTPUT_FILE`:
+OUTPUT_FILE = 'netmap.json'
 
 # `nmap` doesn't always report all devices. The table holds devices found in the
 # last `RESULT_EXPIRE_SECS` seconds:
@@ -77,9 +75,11 @@ class Netmap:
             entry = device.to_entry()
             print("* {ip: <20} {mac: <20} {last_seen}".format(**entry))
 
-    def save(self):
+    def save(self, path):
         entries = [ device.to_entry() for device in self.devices_by_mac.values() ]
-        firebase.put('/', 'status', entries)
+
+        with open(path, 'w') as f:
+            json.dump(entries, f, indent = 2)
 
 
 def nmap(flags, timeout):
@@ -144,6 +144,6 @@ def main():
         netmap.expire()
         print('---')
         netmap.print()
-        netmap.save()
+        netmap.save(OUTPUT_FILE)
 
 main()
