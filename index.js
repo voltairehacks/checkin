@@ -17,7 +17,8 @@ function getPrevious(mac) {
 }
 
 function playSound(mac) {
-    exec('afplay intro.mp3');
+    // exec('afplay intro.mp3'); for mac
+    exec('omxplayer intro.mp3');
 }
 
 
