@@ -1,0 +1,24 @@
+{
+  "name": "doorman-player",
+  "version": "0.0.1",
+  "description": "Say hello!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voltairehacks/checkin.git"
+  },
+  "author": "yemel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/voltairehacks/checkin/issues"
+  },
+  "homepage": "https://github.com/voltairehacks/checkin#readme",
+  "dependencies": {
+    "firebase": "^2.3.1",
+    "moment": "^2.10.6",
+    "shelljs": "^0.5.3"
+  }
+}
